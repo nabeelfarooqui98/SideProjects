@@ -62,6 +62,7 @@ namespace PasswordGen
             if(passFound == 0)
             {
                 Console.WriteLine("Sorry, there was no matching password found.");
+                Console.WriteLine("Press any key to leaves.");
             }
             Console.ReadKey(true);
         }
