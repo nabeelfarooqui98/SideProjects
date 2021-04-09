@@ -28,7 +28,10 @@ namespace PasswordGen
                     GeneratePass();
                     break;
                 case "FIND":
-                    FindExistingPass();
+                    if(File.Exists(Globals.myFile))
+                        FindExistingPass();
+                    else
+                        Console.WriteLine("Password file not found at path: {0}",Globals.myFile);
                     break;
                 default:
                     Console.WriteLine("Please check your input and try again. Press any key to exit the program now.");
